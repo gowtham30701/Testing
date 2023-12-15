@@ -16,8 +16,8 @@ public class DataAccessObject {
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "1553";
 
-    public List<Map<String, Object>> getChartData	() {
-        List<Map<String, Object>> chartData = new ArrayList<>();
+    public List<Map<String, Object>> getVendorData	() {
+        List<Map<String, Object>> vendorData = new ArrayList<>();
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -43,7 +43,7 @@ public class DataAccessObject {
                         dataPoint.put("vendor", entry.getKey());
                         dataPoint.put("count", entry.getValue());
 
-                        chartData.add(dataPoint);
+                        vendorData.add(dataPoint);
                     }
                 }
             }
@@ -51,15 +51,15 @@ public class DataAccessObject {
             e.printStackTrace();
         }
 
-        return chartData;
+        return vendorData;
     }
 
     
     
     
     
-    public List<Map<String, Object>> getChartData2() {
-        List<Map<String, Object>> chartData2 = new ArrayList<>();
+    public List<Map<String, Object>> getCircleData() {
+        List<Map<String, Object>> circleData = new ArrayList<>();
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -85,7 +85,7 @@ public class DataAccessObject {
                         dataPoint2.put("circle", entry.getKey());
                         dataPoint2.put("count", entry.getValue());
 
-                        chartData2.add(dataPoint2);
+                        circleData.add(dataPoint2);
                     }
                 }
             }
@@ -93,7 +93,7 @@ public class DataAccessObject {
             e.printStackTrace();
         }
 
-        return chartData2;
+        return circleData;
     }
    
 

@@ -13,8 +13,8 @@
 
 <%
     DataAccessObject dao = new DataAccessObject();
-    List<Map<String, Object>> pieChartData = dao.getChartData();
-    List<Map<String, Object>> barChartData = dao.getChartData2();
+    List<Map<String, Object>> pieChartData = dao.getVendorData();
+    List<Map<String, Object>> barChartData = dao.getCircleData();
 %>
 
 <div class="row">
